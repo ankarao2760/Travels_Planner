@@ -9,28 +9,35 @@ document.addEventListener('DOMContentLoaded', function () {
         togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
     });
 
-    // Refresh captcha functionality
-    const refreshCaptchaButton = document.getElementById('refreshCaptcha');
+    // Select captcha elements
     const captchaDisplay = document.getElementById('captcha-display');
+    const refreshCaptchaButton = document.getElementById('refreshCaptcha');
     const captchaInput = document.getElementById('captcha');
     const captchaError = document.getElementById('captcha-error');
 
+    // Function to generate a new captcha
     function generateCaptcha() {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         let captcha = '';
         for (let i = 0; i < 6; i++) {
             captcha += characters.charAt(Math.floor(Math.random() * characters.length));
         }
-        captchaDisplay.textContent = captcha;
+        if (captchaDisplay) {
+            captchaDisplay.textContent = captcha;
+        }
     }
 
     generateCaptcha(); // Initialize captcha on page load
 
-    refreshCaptchaButton.addEventListener('click', function () {
-        generateCaptcha();
-        captchaInput.value = '';
-        captchaError.textContent = ''; // Clear any previous errors
-    });
+    if (refreshCaptchaButton) {
+        refreshCaptchaButton.addEventListener('click', function () {
+            generateCaptcha();
+            captchaInput.value = ''; // Clear captcha input field
+            if (captchaError) {
+                captchaError.textContent = ''; // Clear any previous error
+            }
+        });
+    }
 
     // Form validation and login functionality
     const loginForm = document.getElementById('loginForm');
