@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akihabara</title>
+    <link rel="stylesheet" href="akihabara.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Akihabara.jpg" alt="Akihabara" />
+            <div class="carousel-caption">
+              <h2>Akihabara</h2>
+              <p>Known as the "Electric Town," Akihabara is Tokyo's hub for technology, anime, and gaming culture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Akihabara</h2>
+      <p>
+        Akihabara, located in the heart of Tokyo, is famous worldwide for its vibrant atmosphere filled with electronics stores, gaming arcades, anime shops, and maid cafes. Often called the "Electric Town," Akihabara has evolved into a major center for otaku culture, attracting tech enthusiasts and anime fans alike. Whether you're looking to buy the latest gadgets or immerse yourself in Japanese pop culture, Akihabara is the place to be.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Akihabara</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Akihabara 1.jpg" alt="Akihabara Street" />
+          <h3>Shop for Electronics</h3>
+          <p>Browse through countless electronics stores offering the latest gadgets, cameras, and tech accessories.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Akihabara 2.jpg" alt="Akihabara Anime Shops" />
+          <h3>Explore Anime and Manga Shops</h3>
+          <p>Explore various shops that sell anime figures, manga, collectibles, and exclusive limited-edition items.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Akihabara 2.jpg" alt="Maid Cafe in Akihabara" />
+          <h3>Visit a Maid Café</h3>
+          <p>Experience the unique and charming atmosphere of a Maid Café, a popular attraction in Akihabara.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./tokyo.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

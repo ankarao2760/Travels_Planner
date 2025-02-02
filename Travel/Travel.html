@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="./Travel.css" />
+    <script src="./Travel.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo">
+        <h3 id="welcome">Welcome to, Nani Travels Planner</h3>
+        <ul class="nav-links">
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>      
+    </header>
+  
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Rome.jpg" alt="Rome - The Eternal City"/>
+            <div class="carousel-caption">
+              <h2>Explore the Timeless Beauty of Rome</h2>
+              <p>Discover ancient history, art, and culture in Italy's iconic capital.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="../Images/London.jpg" alt="London - A City of Tradition and Innovation" />
+            <div class="carousel-caption">
+              <h2>Discover the Charm of London</h2>
+              <p>From iconic landmarks to hidden gems, plan your perfect London adventure.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="../Images/Tokyo.jpg" alt="Tokyo - A Blend of Tradition and Modernity" />
+            <div class="carousel-caption">
+              <h2>Experience the Magic of Tokyo</h2>
+              <p>Embrace the fusion of tradition and technology in Japan's vibrant capital.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="../Images/Paris.jpg" alt="Paris - The City of Love" />
+            <div class="carousel-caption">
+              <h2>Fall in Love with Paris</h2>
+              <p>Indulge in art, fashion, and romance while exploring the heart of France.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <h2 class="section-title">Popular Destinations</h2>
+      <div class="destination-grid">
+        <!-- Paris -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Paris.jpg" alt="Paris" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Paris/paris.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Paris</h3>
+          <p>Experience the charm of the Eiffel Tower and French cuisine.</p>
+        </div>
+        <!-- Tokyo -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Tokyo.jpg" alt="Tokyo" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Tokyo/Tokyo.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Tokyo</h3>
+          <p>Immerse yourself in the vibrant culture and technology of Japan.</p>
+        </div>
+        <!-- Maldives -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Maldives.jpg" alt="Maldives" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Maldives/maldives.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Maldives</h3>
+          <p>Relax on pristine beaches and enjoy luxurious resorts.</p>
+        </div>
+    
+        <!-- New York -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/NewYork.jpg" alt="New York" />
+            <div class="overlay">
+              <button onclick="viewDetails('../NewYork/newyork.html')">View Details</button>
+            </div>
+          </div>
+          <h3>New York</h3>
+          <p>Explore the bustling streets and iconic landmarks of NYC.</p>
+        </div>
+    
+        <!-- London -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/London.jpg" alt="London" />
+            <div class="overlay">
+              <button onclick="viewDetails('../London/london.html')">View Details</button>
+            </div>
+          </div>
+          <h3>London</h3>
+          <p>Discover historic landmarks like Big Ben and Buckingham Palace.</p>
+        </div>
+    
+        <!-- Sydney -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Sydney.jpg" alt="Sydney" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Syndey/syndey.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Sydney</h3>
+          <p>Enjoy the stunning Sydney Opera House and its beautiful harbor views.</p>
+        </div>
+
+        <!-- Dubai -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Dubai.jpg" alt="Dubai" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Dubai/dubai.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Dubai</h3>
+          <p>Marvel at futuristic skyscrapers and luxury shopping experiences.</p>
+        </div>
+    
+        <!-- Rome -->
+        <div class="destination-card">
+          <div class="image-container">
+            <img src="../Images/Rome.jpg" alt="Rome" />
+            <div class="overlay">
+              <button onclick="viewDetails('../Rome/rome.html')">View Details</button>
+            </div>
+          </div>
+          <h3>Rome</h3>
+          <p>Step back in time to ancient ruins like the Colosseum and the Roman Forum.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+<a href="../Travel/Travel.html"></a>
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            We are passionate travel planners committed to crafting unforgettable experiences for our clients. Let us help you explore the world with comfort and style.
+          </p>
+          <button class="about-btn" onclick="viewDetails('./about.html')">Learn More</button>
+        </div>
+        <div class="about-image">
+          <img src="../Images/Travel Experience.jpg" alt="About Us - Travel Experience">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+    
+  </body>
+</html>
+

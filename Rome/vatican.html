@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vatican City</title>
+    <link rel="stylesheet" href="vatican.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Vatican.jpg" alt="Vatican City" />
+            <div class="carousel-caption">
+              <h2>Vatican City</h2>
+              <p>Visit the heart of the Roman Catholic Church and home to Renaissance art treasures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Vatican City</h2>
+      <p>
+        Vatican City is an independent city-state enclaved within Rome, Italy. It is the spiritual and administrative center of the Roman Catholic Church and home to the Pope.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Vatican City</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Vatican 1.jpg" alt="St. Peter's Basilica" />
+          <h3>St. Peter's Basilica</h3>
+          <p>Visit the world-renowned church and its stunning dome.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Vatican 2.jpg" alt="Sistine Chapel" />
+          <h3>Sistine Chapel</h3>
+          <p>Admire Michelangelo's masterpieces on the chapel’s ceiling.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Vatican 3.jpg" alt="Vatican Museums" />
+          <h3>Vatican Museums</h3>
+          <p>Explore the extensive collection of art, sculptures, and historical artifacts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="../Rome/rome.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

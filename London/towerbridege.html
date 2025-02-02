@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tower Bridge</title>
+    <link rel="stylesheet" href="towerbridege.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Tower Bridge.jpg" alt="Tower Bridge" />
+            <div class="carousel-caption">
+              <h2>Tower Bridge</h2>
+              <p>An iconic landmark and symbol of London, spanning the River Thames.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Tower Bridge</h2>
+      <p>
+        Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894.
+        It connects the Tower of London on the north bank to Southwark on the south. The bridge has become
+        an iconic symbol of London and offers stunning views of the city.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Tower Bridge</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Tower Bridge 1.jpeg" alt="Walkway at Tower Bridge" />
+          <h3>Glass Walkway</h3>
+          <p>Walk along the glass walkway for a unique view of the city below.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Tower Bridge 2.jpg" alt="Engine Room at Tower Bridge" />
+          <h3>Explore the Engine Rooms</h3>
+          <p>Learn about the Victorian engineering marvel behind Tower Bridge.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Tower Bridge 3.jpg" alt="Tower Bridge at Night" />
+          <h3>Nighttime Views</h3>
+          <p>Admire the beautifully lit bridge against the London skyline at night.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./london.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

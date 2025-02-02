@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokyo</title>
+    <link rel="stylesheet" href="./Tokyo.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" />
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Tokyo.jpg" alt="Tokyo - The City of Innovation" />
+            <div class="carousel-caption">
+              <h2>Discover the Wonders of Tokyo</h2>
+              <p>Embrace the blend of tradition and futuristic innovation in Japan’s capital city.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Attractions in Tokyo</h2>
+      <div class="destination-grid">
+        <a href="./skytree.html" class="destination-card">
+          <img src="../Images/Skytree.jpg" alt="Tokyo Skytree" />
+          <h3>Tokyo Skytree</h3>
+          <p>Ascend the tallest tower in Japan for panoramic views of the city.</p>
+        </a>
+        <a href="./shibuya.html" class="destination-card">
+          <img src="../Images/Shibuya.jpg" alt="Shibuya Crossing" />
+          <h3>Shibuya Crossing</h3>
+          <p>Experience the hustle and bustle of the world’s busiest intersection.</p>
+        </a>
+        <a href="./sensoji.html" class="destination-card">
+          <img src="../Images/Sensoji.jpg" alt="Senso-ji Temple" />
+          <h3>Senso-ji Temple</h3>
+          <p>Visit Tokyo’s oldest temple and explore its rich history and culture.</p>
+        </a>
+        <a href="./akihabara.html" class="destination-card">
+          <img src="../Images/Akihabara.jpg" alt="Akihabara" />
+          <h3>Akihabara</h3>
+          <p>Discover Tokyo’s famous tech and electronics district, known for its gadgets and gaming.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Travel Packages for Tokyo</h2>
+      <div class="filter-options">
+        <label for="filter">Filter by Budget:</label>
+        <select id="filter" onchange="filterPackages()">
+          <option value="all">All</option>
+          <option value="low">Budget-Friendly</option>
+          <option value="mid">Mid-Range</option>
+          <option value="high">Luxury</option>
+        </select>
+      </div>
+
+      <div class="packages-grid" id="packages-grid">
+        <div class="package-card" data-category="low">
+          <h3>Budget Adventure</h3>
+          <p>Explore Tokyo on a budget. Starting at $499.</p>
+          <button class="book-btn" onclick="bookPackage('low')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="mid">
+          <h3>Tokyo Escapade</h3>
+          <p>A perfect getaway for those looking for a little more comfort. Starting at $999.</p>
+          <button class="book-btn" onclick="bookPackage('mid')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="high">
+          <h3>Tokyo Luxury Experience</h3>
+          <p>Indulge in a luxurious Tokyo stay. Starting at $2499.</p>
+          <button class="book-btn" onclick="bookPackage('high')">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function bookPackage(category) {
+      const bookingId = 'TOKYO-' + Math.floor(Math.random() * 100000);
+      localStorage.setItem('bookingId', bookingId);  // Store bookingId
+      localStorage.setItem('packageCategory', category);  // Store selected category
+      window.location.href = "./payment.html";
+      }
+    </script>
+  </body>
+</html>

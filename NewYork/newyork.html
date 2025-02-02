@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New York</title>
+    <link rel="stylesheet" href="./newyork.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" />
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/NewYork.jpg" alt="New York" />
+            <div class="carousel-caption">
+              <h2>Experience the Big Apple</h2>
+              <p>Explore the city that never sleeps with its iconic landmarks and vibrant culture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Attractions in New York</h2>
+      <div class="destination-grid">
+        <a href="./statueliberty.html" class="destination-card">
+          <img src="../Images/Statue.jpg" alt="Statue of Liberty" />
+          <h3>Statue of Liberty</h3>
+          <p>Visit the iconic symbol of freedom and democracy.</p>
+        </a>
+        <a href="./centralpark.html" class="destination-card">
+          <img src="../Images/Central Park.jpg" alt="Central Park" />
+          <h3>Central Park</h3>
+          <p>Relax and unwind in the heart of the bustling city.</p>
+        </a>
+        <a href="./times_square.html" class="destination-card">
+          <img src="../Images/Time Square.jpg" alt="Times Square" />
+          <h3>Times Square</h3>
+          <p>Experience the dazzling lights and energy of this famous landmark.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Travel Packages for New York</h2>
+      <div class="filter-options">
+        <label for="filter">Filter by Budget:</label>
+        <select id="filter" onchange="filterPackages()">
+          <option value="all">All</option>
+          <option value="low">Budget-Friendly</option>
+          <option value="mid">Mid-Range</option>
+          <option value="high">Luxury</option>
+        </select>
+      </div>
+
+      <div class="packages-grid" id="packages-grid">
+        <div class="package-card" data-category="low">
+          <h3>City Explorer</h3>
+          <p>Affordable urban adventure. Starting at $499.</p>
+          <button class="book-btn" onclick="bookPackage('low')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="mid">
+          <h3>Metropolitan Getaway</h3>
+          <p>Perfect for families and couples. Starting at $1299.</p>
+          <button class="book-btn" onclick="bookPackage('mid')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="high">
+          <h3>Luxury NYC Experience</h3>
+          <p>Enjoy New York in ultimate style. Starting at $3499.</p>
+          <button class="book-btn" onclick="bookPackage('high')">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function bookPackage(category) {
+        const bookingId = 'NYC-' + Math.floor(Math.random() * 100000);
+        localStorage.setItem('bookingId', bookingId);
+        localStorage.setItem('packageCategory',category);
+        window.location.href = "./payment.html";
+      }
+    </script>
+  </body>
+</html>

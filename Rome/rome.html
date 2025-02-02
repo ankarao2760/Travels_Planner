@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rome</title>
+    <link rel="stylesheet" href="./rome.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" />
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Rome.jpg" alt="Rome" />
+            <div class="carousel-caption">
+              <h2>Explore Rome</h2>
+              <p>Discover the eternal city and its ancient wonders.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Attractions in Rome</h2>
+      <div class="destination-grid">
+        <a href="./colosseum.html" class="destination-card">
+          <img src="../Images/Colosseum.jpg" alt="Colosseum" />
+          <h3>Colosseum</h3>
+          <p>Visit Rome’s iconic ancient amphitheater.</p>
+        </a>
+        <a href="./vatican.html" class="destination-card">
+          <img src="../Images/Vatican.jpg" alt="Vatican City" />
+          <h3>Vatican City</h3>
+          <p>Explore the world's smallest country and its treasures.</p>
+        </a>
+        <a href="./trevi.html" class="destination-card">
+          <img src="../Images/Trive Fountain.jpg" alt="Trevi Fountain" />
+          <h3>Trevi Fountain</h3>
+          <p>Make a wish at this stunning Roman landmark.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Travel Packages for Rome</h2>
+      <div class="filter-options">
+        <label for="filter">Filter by Budget:</label>
+        <select id="filter" onchange="filterPackages()">
+          <option value="all">All</option>
+          <option value="low">Budget-Friendly</option>
+          <option value="mid">Mid-Range</option>
+          <option value="high">Luxury</option>
+        </select>
+      </div>
+
+      <div class="packages-grid" id="packages-grid">
+        <div class="package-card" data-category="low">
+          <h3>Historical Rome</h3>
+          <p>Discover ancient sites. Starting at EUR 699.</p>
+          <button class="book-btn" onclick="bookPackage('low')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="mid">
+          <h3>Cultural Journey</h3>
+          <p>Perfect for families. Starting at EUR 1299.</p>
+          <button class="book-btn" onclick="bookPackage('mid')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="high">
+          <h3>Luxury Rome Tour</h3>
+          <p>Premium Roman holiday. Starting at EUR 2999.</p>
+          <button class="book-btn" onclick="bookPackage('high')">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function bookPackage(category) {
+        const bookingId = 'ROM-' + Math.floor(Math.random() * 100000);
+        localStorage.setItem('bookingId', bookingId);
+        localStorage.setItem('packageCategory', category);  // Store selected category
+        window.location.href = "./payment.html";
+      }
+    </script>
+  </body>
+</html>

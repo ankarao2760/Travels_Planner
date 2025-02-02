@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palm Jumeirah</title>
+    <link rel="stylesheet" href="palm.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Palm.jpg" alt="Palm Jumeirah" />
+            <div class="carousel-caption">
+              <h2>Palm Jumeirah</h2>
+              <p>An artificial archipelago and one of the most luxurious places in Dubai.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Palm Jumeirah</h2>
+      <p>
+        Palm Jumeirah is a man-made island in the shape of a palm tree, located off the coast of Dubai. Known for its luxury resorts, upscale homes, and stunning views, Palm Jumeirah is a symbol of Dubai's bold vision for innovation and development.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Palm Jumeirah</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Palm 1.jpg" alt="Atlantis Resort" />
+          <h3>Stay at Atlantis</h3>
+          <p>Experience luxury at the famous Atlantis, The Palm Resort, offering world-class amenities and entertainment.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Palm 2.jpg" alt="Beaches at Palm Jumeirah" />
+          <h3>Relax on Private Beaches</h3>
+          <p>Indulge in a relaxing day at the private beaches surrounding Palm Jumeirah.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Palm 3.jpg" alt="Shopping at Palm Jumeirah" />
+          <h3>Shopping and Dining</h3>
+          <p>Explore the exclusive shopping malls and enjoy fine dining with incredible views.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./dubai.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

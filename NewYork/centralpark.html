@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Central Park</title>
+    <link rel="stylesheet" href="./centralpark.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Central Park.jpg" alt="Central Park" />
+            <div class="carousel-caption">
+              <h2>Central Park</h2>
+              <p>Discover the green oasis in the heart of New York City.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Central Park</h2>
+      <p>
+        Central Park, spanning 843 acres, is one of New York City's most iconic landmarks. Established in 1858, it is a lush haven for locals and visitors, 
+        featuring walking paths, lakes, meadows, and countless attractions. Whether you're seeking a peaceful retreat or outdoor adventures, Central Park has it all.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Central Park</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Central Park 1.jpg" alt="Rowing in Central Park" />
+          <h3>Row a Boat</h3>
+          <p>Rent a rowboat at the Loeb Boathouse and glide through the park's picturesque lake.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Central Park 2.jpg" alt="Belvedere Castle" />
+          <h3>Visit Belvedere Castle</h3>
+          <p>Explore this historic landmark with stunning views of the park.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Central Park 3.jpg" alt="Central Park Carousel" />
+          <h3>Ride the Carousel</h3>
+          <p>Enjoy a nostalgic ride on the famous Central Park Carousel, loved by children and adults alike.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./newyork.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

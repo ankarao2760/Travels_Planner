@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../Login/Login.css">
+    <script src="../Login/Login.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Background Video -->
+    <video src="../Images/Travel.mp4" autoplay muted loop id="background_video"></video>
+
+    <!-- Login Container -->
+    <div class="overlay">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Welcome Back!</h2>
+                <p>Please login to continue</p>
+            </div>
+
+            <form id="loginForm">
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your Mobile or Email" required>
+                    <span id="username-error" class="error-message"></span>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                        <button type="button" id="togglePassword" aria-label="Show/Hide Password">👁️</button>
+                    </div>
+                    <span id="password-error" class="error-message"></span>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <a href="./ForgotPassword/ForgotPassword.html" class="forgot-password">Forgot Password?</a>
+
+                <!-- Captcha Field -->
+                <div class="form-group captcha-group">
+                    <label>Captcha</label>
+                    <div class="captcha-container">
+                        <div class="captcha-box" id="captcha-display">nan45i</div>
+                        <button type="button" id="refreshCaptcha" aria-label="Refresh Captcha">🔄 Refresh</button>
+                    </div>
+                    <input type="text" id="captcha" name="captcha" placeholder="Enter Captcha" required>
+                    <span id="captcha-error" class="error-message"></span>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">Login</button>
+
+                <!-- Register Link -->
+                <div class="register">
+                    New User? <a href="./SignUp/SignUp.html">Register Now</a>
+                </div>
+                <a href="../Travel/Travel.html"></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

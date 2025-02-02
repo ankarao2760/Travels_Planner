@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buckingham Palace</title>
+    <link rel="stylesheet" href="buckhingham.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Buckingham.jpg" alt="Buckingham Palace" />
+            <div class="carousel-caption">
+              <h2>Buckingham Palace</h2>
+              <p>The official residence of the British Monarch, a must-see in London.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Buckingham Palace</h2>
+      <p>
+        Buckingham Palace is the London residence and administrative headquarters of the British monarch.
+        Built in 1703 as a townhouse, it became the royal residence in 1837. The Palace is renowned for
+        its beautiful gardens and iconic Changing of the Guard ceremony.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Buckingham Palace</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Buckingham 1.jpg" alt="Changing of the Guard" />
+          <h3>Changing of the Guard</h3>
+          <p>Witness this iconic ceremony outside the palace gates.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Buckingham 2.jpg" alt="State Rooms" />
+          <h3>Tour the State Rooms</h3>
+          <p>Explore the grand state rooms during the annual summer opening.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Buckingham 3.jpg" alt="Palace Gardens" />
+          <h3>Palace Gardens</h3>
+          <p>Stroll through the stunning gardens surrounding the palace.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./london.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

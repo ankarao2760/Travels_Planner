@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Montmartre</title>
+    <link rel="stylesheet" href="./montmartre.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="./Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Montmartre.jpg" alt="Montmartre" />
+            <div class="carousel-caption">
+              <h2>Montmartre</h2>
+              <p>Discover the artistic and historic heart of Paris, known for its charming streets and stunning views.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Montmartre</h2>
+      <p>
+        Montmartre is a historic and artistic district in the north of Paris, France. It has been a hub for artists like Picasso and Van Gogh, offering panoramic views of the city from the Sacré-Cœur Basilica. Its cobbled streets, cafes, and vibrant atmosphere continue to attract both tourists and locals.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Montmartre</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Montmartre 1.jpg" alt="Sacré-Cœur Basilica" />
+          <h3>Visit the Sacré-Cœur Basilica</h3>
+          <p>Marvel at the beautiful basilica and enjoy the panoramic views of Paris from its dome.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Montmartre 2.jpg" alt="Place du Tertre" />
+          <h3>Explore Place du Tertre</h3>
+          <p>Wander the vibrant square where artists display their work, a true piece of Montmartre's artistic history.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Montmartre 3.jpg" alt="Le Mur des Je T'aime" />
+          <h3>Visit the Wall of Love</h3>
+          <p>Discover the "I love you" wall, a romantic spot covered in over 300 languages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./paris.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

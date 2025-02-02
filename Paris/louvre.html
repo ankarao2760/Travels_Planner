@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louvre Museum</title>
+    <link rel="stylesheet" href="./louvre.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="./Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Louvre.jpg" alt="Louvre Museum" />
+            <div class="carousel-caption">
+              <h2>The Louvre Museum</h2>
+              <p>Explore the world's largest and most visited museum, a treasure trove of art and history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About the Louvre Museum</h2>
+      <p>
+        The Louvre Museum, located on the banks of the River Seine in Paris, France, is home to thousands of
+        works of art, including the iconic Mona Lisa and the Venus de Milo. Originally a royal palace,
+        it was transformed into a museum in 1793. Today, it stands as a symbol of cultural heritage.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at the Louvre Museum</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Louvre 1.jpg" alt="Famous Art at Louvre" />
+          <h3>Admire Masterpieces</h3>
+          <p>Discover works of art from renowned artists like Leonardo da Vinci, Michelangelo, and more.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Louvre 2.jpg" alt="Louvre Gallery" />
+          <h3>Explore the Galleries</h3>
+          <p>Wander through the Louvre's extensive galleries and uncover art from different periods and regions.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Louvre 3.jpg" alt="Louvre Museum at Night" />
+          <h3>Night Tours</h3>
+          <p>Experience the Louvre at night with exclusive guided tours and special exhibitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./paris.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

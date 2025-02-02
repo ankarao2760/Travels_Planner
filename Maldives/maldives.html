@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maldives</title>
+    <link rel="stylesheet" href="./maldives.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" />
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Maldives.jpg" alt="Maldives" />
+            <div class="carousel-caption">
+              <h2>Welcome to Paradise</h2>
+              <p>Relax in the pristine beaches and azure waters of the Maldives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Attractions in Maldives</h2>
+      <div class="destination-grid">
+        <a href="./prestine.html" class="destination-card">
+          <img src="../Images/Maldives Beach.jpg" alt="Maldives Beach" />
+          <h3>Pristine Beaches</h3>
+          <p>Relax on world-class white sand beaches.</p>
+        </a>
+        <a href="./luxury.html" class="destination-card">
+          <img src="../Images/Maldives Luxury.jpg" alt="Luxury Resorts" />
+          <h3>Luxury Resorts</h3>
+          <p>Stay in overwater villas offering breathtaking views.</p>
+        </a>
+        <a href="./scubadiving.html" class="destination-card">
+          <img src="../Images/Scuba Diving.jpg" alt="Scuba Diving" />
+          <h3>Scuba Diving</h3>
+          <p>Discover vibrant coral reefs and marine life.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Travel Packages for Maldives</h2>
+      <div class="filter-options">
+        <label for="filter">Filter by Budget:</label>
+        <select id="filter" onchange="filterPackages()">
+          <option value="all">All</option>
+          <option value="low">Budget-Friendly</option>
+          <option value="mid">Mid-Range</option>
+          <option value="high">Luxury</option>
+        </select>
+      </div>
+
+      <div class="packages-grid" id="packages-grid">
+        <div class="package-card" data-category="low">
+          <h3>Budget Retreat</h3>
+          <p>Affordable tropical getaway. Starting at $399.</p>
+          <button class="book-btn" onclick="bookPackage('low')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="mid">
+          <h3>Island Escape</h3>
+          <p>Perfect for a romantic getaway. Starting at $999.</p>
+          <button class="book-btn" onclick="bookPackage('mid')">Book Now</button>
+        </div>
+        <div class="package-card" data-category="high">
+          <h3>Luxury Island Experience</h3>
+          <p>Unparalleled luxury. Starting at $2999.</p>
+          <button class="book-btn" onclick="bookPackage('high')">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function bookPackage(category) {
+        const bookingId = 'MALDIVES-' + Math.floor(Math.random() * 100000);
+        localStorage.setItem('bookingId', bookingId);
+        window.location.href = "./payment.html";
+      }
+    </script>
+  </body>
+</html>

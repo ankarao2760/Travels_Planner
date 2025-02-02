@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senso-ji Temple</title>
+    <link rel="stylesheet" href="sensoji.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Sensoji.jpg" alt="Senso-ji Temple" />
+            <div class="carousel-caption">
+              <h2>Senso-ji Temple</h2>
+              <p>Tokyo's oldest and most famous Buddhist temple, a must-visit historical site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Senso-ji Temple</h2>
+      <p>
+        Senso-ji Temple, located in Asakusa, Tokyo, is the oldest temple in the city, founded in 628 AD. This Buddhist temple is dedicated to the bodhisattva Kannon and attracts millions of visitors every year. The temple complex includes the famous Kaminarimon Gate, which is a symbol of Tokyo, and the shopping street of Nakamise, filled with traditional Japanese goods and snacks.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Senso-ji Temple</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Sensoji 1.jpeg" alt="Kaminarimon Gate" />
+          <h3>Visit Kaminarimon Gate</h3>
+          <p>Take a photo at the iconic Kaminarimon Gate, the entrance to Senso-ji Temple.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Sensoji 2.jpg" alt="Nakamise Street" />
+          <h3>Explore Nakamise Street</h3>
+          <p>Walk through Nakamise, a lively shopping street leading to the temple with traditional Japanese treats.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Sensoji 3.jpg" alt="Statue of Kannon" />
+          <h3>Pray at the Main Hall</h3>
+          <p>Offer your prayers and take in the peaceful atmosphere at the Main Hall of Senso-ji Temple.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./tokyo.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

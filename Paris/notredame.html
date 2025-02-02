@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notre Dame Cathedral</title>
+    <link rel="stylesheet" href="./notredame.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/NotreDame.jpg" alt="Notre Dame Cathedral" />
+            <div class="carousel-caption">
+              <h2>Notre Dame Cathedral</h2>
+              <p>An architectural masterpiece and one of Paris' most visited landmarks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Notre Dame Cathedral</h2>
+      <p>
+        Notre Dame Cathedral, also known as Notre-Dame de Paris, is a medieval Catholic cathedral located
+        on the Île de la Cité in the heart of Paris. Built between 1163 and 1345, it is a prime example
+        of French Gothic architecture, renowned for its magnificent façade, stunning stained glass
+        windows, and iconic flying buttresses.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Notre Dame</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/NotreDame 1.jpg" alt="Notre Dame Interior" />
+          <h3>Explore the Interior</h3>
+          <p>Marvel at the intricate design and stunning stained glass windows inside the cathedral.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/NotreDame 2.jpg" alt="View from Notre Dame Tower" />
+          <h3>Climb the Towers</h3>
+          <p>Ascend the towers for breathtaking views of Paris and a closer look at the famous gargoyles.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/NotreDame 3.jpg" alt="Notre Dame at Night" />
+          <h3>Nighttime Views</h3>
+          <p>Experience the cathedral's illuminated beauty at night from the Seine River.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./paris.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button id="submit" type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

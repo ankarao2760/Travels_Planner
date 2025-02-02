@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bondi Beach</title>
+    <link rel="stylesheet" href="bondi.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Bondi.jpg" alt="Bondi Beach" />
+            <div class="carousel-caption">
+              <h2>Bondi Beach</h2>
+              <p>Experience Sydney's most famous beach destination.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Bondi Beach</h2>
+      <p>
+        Bondi Beach is a world-renowned beach known for its golden sands, turquoise waters, 
+        and vibrant atmosphere. It’s the perfect destination for sunbathing, surfing, or simply 
+        enjoying the Australian coastal lifestyle.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Bondi Beach</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Bondi 1.jpg" alt="Surfing at Bondi" />
+          <h3>Surfing</h3>
+          <p>Learn to surf or ride the waves at this iconic beach.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Bondi 2.jpeg" alt="Coastal Walk" />
+          <h3>Coastal Walk</h3>
+          <p>Enjoy a scenic coastal walk to nearby beaches and cliffs.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Bondi 3.jpg" alt="Cafes at Bondi" />
+          <h3>Beachside Cafes</h3>
+          <p>Relax at one of the many beachfront cafes and restaurants.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="../Syndey/syndey.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

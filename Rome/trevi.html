@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trevi Fountain</title>
+    <link rel="stylesheet" href="trevi.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Trive Fountain.jpg" alt="Trevi Fountain" />
+            <div class="carousel-caption">
+              <h2>Trevi Fountain</h2>
+              <p>Marvel at the stunning Baroque masterpiece and tradition of coin tossing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About the Trevi Fountain</h2>
+      <p>
+        The Trevi Fountain is a monumental Baroque fountain in Rome, famous for its magnificent sculptures and the tradition of throwing coins into the water.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at Trevi Fountain</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Trive Fountain 1.jpg" alt="Coin Tossing" />
+          <h3>Coin Tossing</h3>
+          <p>Follow the tradition and toss a coin into the fountain to ensure your return to Rome.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Trive Fountain 2.jpg" alt="Photography" />
+          <h3>Photography</h3>
+          <p>Capture the beauty of the Trevi Fountain from various angles.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Trive Fountain 3.jpg" alt="Evening Illuminations" />
+          <h3>Evening Illuminations</h3>
+          <p>Experience the magical atmosphere of the fountain lit up at night.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="../Rome/rome.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

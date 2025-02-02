@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokyo Skytree</title>
+    <link rel="stylesheet" href="skytree.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Skytree.jpg" alt="Tokyo Skytree" />
+            <div class="carousel-caption">
+              <h2>The Tokyo Skytree</h2>
+              <p>Standing tall as Japan's tallest tower, offering stunning views of Tokyo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About the Tokyo Skytree</h2>
+      <p>
+        The Tokyo Skytree is a broadcasting, restaurant, and observation tower in Sumida, Tokyo, Japan.
+        Completed in 2012, it stands at 634 meters, making it the tallest structure in Japan and the second
+        tallest in the world. The tower offers breathtaking panoramic views of Tokyo and its surroundings.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do at the Tokyo Skytree</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Skytree 1.jpg" alt="View from Tokyo Skytree" />
+          <h3>Take in the Views</h3>
+          <p>Enjoy panoramic views of Tokyo from the observation decks of the Skytree.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Skytree 2.jpg" alt="Restaurant at Tokyo Skytree" />
+          <h3>Dine with a View</h3>
+          <p>Experience unique dining at one of the Skytree’s restaurants with views of Tokyo.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Skytree 3.jpg" alt="Tokyo Skytree at Night" />
+          <h3>Nighttime Illuminations</h3>
+          <p>Witness the Tokyo Skytree light up in beautiful illuminations every evening.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./tokyo.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

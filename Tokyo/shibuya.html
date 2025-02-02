@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shibuya</title>
+    <link rel="stylesheet" href="shibuya.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Shibuya.jpg" alt="Shibuya Crossing" />
+            <div class="carousel-caption">
+              <h2>Shibuya Crossing</h2>
+              <p>One of the busiest pedestrian crossings in the world, an iconic symbol of Tokyo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Shibuya</h2>
+      <p>
+        Shibuya is a popular district in Tokyo known for its vibrant nightlife, fashionable shopping streets, and iconic landmarks like Shibuya Crossing. It’s a hub for both locals and tourists, attracting millions of visitors annually. Shibuya offers a unique blend of traditional and modern culture, making it a must-visit location for travelers.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Shibuya</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Shibuya 1.jpg" alt="Shibuya Crossing" />
+          <h3>Shibuya Crossing</h3>
+          <p>Experience the hustle and bustle of Shibuya's famous pedestrian crossing, a must-see in Tokyo.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Shibuya 2.jpg" alt="Meiji Shrine" />
+          <h3>Visit Meiji Shrine</h3>
+          <p>Explore the peaceful Meiji Shrine, a tranquil escape located near Harajuku and Shibuya.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Shibuya 3.jpg" alt="Shibuya Nightlife" />
+          <h3>Shibuya Nightlife</h3>
+          <p>Enjoy the vibrant nightlife of Shibuya, with countless bars, clubs, and karaoke spots to explore.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./tokyo.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

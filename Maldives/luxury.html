@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Resorts</title>
+    <link rel="stylesheet" href="luxury.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Maldives Luxury.jpg" alt="Luxury Resorts in Maldives" />
+            <div class="carousel-caption">
+              <h2>Luxury Resorts</h2>
+              <p>Stay in world-class overwater villas and beachfront suites in the Maldives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Luxury Resorts</h2>
+      <p>
+        The Maldives is synonymous with luxury, offering an array of exclusive resorts featuring overwater
+        villas, private pools, and unparalleled service. Experience fine dining, rejuvenating spa treatments,
+        and breathtaking ocean views at these world-class accommodations. Whether you're on a honeymoon or a
+        family vacation, Maldives resorts redefine luxury living.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">What to Experience at Luxury Resorts</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Maldives Luxury 1.jpg" alt="Overwater Villas" />
+          <h3>Overwater Villas</h3>
+          <p>Stay in iconic overwater villas with glass floors and direct access to the ocean.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Maldives Luxury 2.jpg" alt="Spa Treatment" />
+          <h3>Luxury Spa Treatments</h3>
+          <p>Relax and rejuvenate with world-class spa services amidst stunning tropical surroundings.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Maldives Luxury 3.jpg" alt="Fine Dining" />
+          <h3>Fine Dining</h3>
+          <p>Indulge in gourmet cuisine prepared by top chefs, paired with spectacular ocean views.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./maldives.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

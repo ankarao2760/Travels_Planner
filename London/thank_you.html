@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Payment Successful</title>
+    <link rel="stylesheet" href="thank_you.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <section id="thank-you-section">
+        <h2>Thank You for Your Confirmation!</h2>
+        <p>Your payment has been processed successfully. Your booking ID is:</p>
+        <p><strong id="thank-you-booking-id"></strong></p>
+        <p>We are excited to have you join us for this unforgettable journey to Paris!</p>
+        <p>For any assistance, please feel free to <a href="#contact">contact us</a> or visit our <a href="../Travel/Travel.html">home page</a>.</p>
+        <p>We will send you further details about your trip shortly. Stay tuned!</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ankaraotempalli.ankarao" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/nani2760" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/i_am_urs_nani_270406/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/anka-rao-tempalli" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footer">Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookingIdFromUrl = urlParams.get('bookingId');
+        const bookingIdFromLocalStorage = localStorage.getItem('bookingId');
+
+        if (bookingIdFromUrl && bookingIdFromUrl === bookingIdFromLocalStorage) {
+            document.getElementById('thank-you-booking-id').textContent = bookingIdFromUrl;
+            localStorage.removeItem('bookingId');
+            localStorage.removeItem('packageCategory');
+        } else {
+            document.getElementById('thank-you-booking-id').textContent = "Invalid or missing Booking ID.";
+        }
+    </script>
+</body>
+</html>

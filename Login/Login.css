@@ -1,0 +1,247 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif; /* Sleek modern font */
+    height: 100%;
+    overflow: hidden;
+    /*background-color: #f0f2f5;*/ /* Soft background for better visuals */
+}
+
+/* Background Video */
+#background_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(60%); /* Dimmed for better contrast with content */
+}
+
+/* Overlay to Center the Login Form */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: rgba(0, 0, 0, 0.75); Darker overlay for focus*/
+    padding: 20px; /* Padding for small screens */
+    box-sizing: border-box;
+}
+
+/* Login Container */
+.login-container {
+    /* background: #ffffff; */
+    padding: 20px 30px;
+    width: 450px;
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in effect for form */
+}
+    
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Login Header */
+.login-header h2 {
+    font-size: 28px;
+    margin: 0 0 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.login-header p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Password Container */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.password-container button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+.password-container a{
+    width: 150px;
+    height: 10px;
+}
+
+.password-container button:hover {
+    color: #4CAF50;
+}
+
+/* Captcha */
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.captcha-box {
+    background: #f4f4f4;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+#refreshCaptcha {
+    background: #f4f4f4;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 200px;
+    border: none;
+}
+
+#refreshCaptcha:hover {
+    /* color: #004080; */
+    cursor: pointer;
+
+}
+#captcha{
+    margin-top: 11px;
+    text-align: left;
+}
+
+/* Buttons */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4CAF50, #3e8e41);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #3e8e41, #4CAF50);
+}
+
+.forgot-password {
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-align: right;
+    margin-top: 8px;
+    margin-left: 65%;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+    width: 150px;
+    height: 20px;
+}
+
+.forgot-password:hover {
+    color: red;
+}
+
+/* Register Section */
+.register {
+    margin-top: 20px;
+    font-size: 19px;
+    color: red;
+    font-weight: bold;
+
+}
+
+.register a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register a:hover {
+    color: red;
+    text-decoration: underline;
+}
+/* Error messages in red color */
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%; /* Make it fit smaller screens */
+        padding: 30px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+    }
+}

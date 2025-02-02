@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Times Square</title>
+    <link rel="stylesheet" href="./times_square.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Time Square.jpg" alt="Times Square" />
+            <div class="carousel-caption">
+              <h2>Times Square</h2>
+              <p>Experience the vibrant energy of the Crossroads of the World.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Times Square</h2>
+      <p>
+        Times Square is one of the most iconic landmarks in New York City. Known for its dazzling lights, towering billboards, and non-stop energy, it attracts millions of visitors annually. 
+        From Broadway theaters to world-class dining and shopping, Times Square offers an unforgettable experience at the heart of Manhattan.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Things to Do in Times Square</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Time Square 1.jpg" alt="Broadway Shows" />
+          <h3>Catch a Broadway Show</h3>
+          <p>Enjoy world-famous musicals and plays at one of the many nearby theaters.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Time Square 2.jpg" alt="Neon Lights" />
+          <h3>Neon Nightlife</h3>
+          <p>Marvel at the vibrant LED billboards lighting up the square at night.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Time Square 3.jpg" alt="Times Square Ball Drop" />
+          <h3>New Year’s Eve Ball Drop</h3>
+          <p>Join the iconic countdown and celebration on New Year's Eve.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./newyork.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travel Planners &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

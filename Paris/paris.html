@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paris</title>
+    <link rel="stylesheet" href="./paris.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" />
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Paris.jpg" alt="Paris - The City of Love" />
+            <div class="carousel-caption">
+              <h2>Fall in Love with Paris</h2>
+              <p>Indulge in art, fashion, and romance while exploring the heart of France.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Attractions in Paris</h2>
+      <div class="destination-grid">
+        <a href="./effel.html" class="destination-card">
+          <img src="../Images/EiffelTower.jpg" alt="Eiffel Tower" />
+          <h3>Eiffel Tower</h3>
+          <p>Ascend the symbol of Paris for breathtaking views of the city.</p>
+        </a>
+        <a href="./louvre.html" class="destination-card">
+          <img src="../Images/Louvre.jpg" alt="Louvre Museum" />
+          <h3>Louvre Museum</h3>
+          <p>Explore one of the world’s largest and most visited art museums.</p>
+        </a>
+        <a href="./notredame.html" class="destination-card">
+          <img src="../Images/NotreDame.jpg" alt="Notre Dame Cathedral" />
+          <h3>Notre-Dame Cathedral</h3>
+          <p>Visit this iconic gothic cathedral that has stood for centuries.</p>
+        </a>
+        <a href="./montmartre.html" class="destination-card">
+          <img src="../Images/Montmartre.jpg" alt="Montmartre" />
+          <h3>Montmartre</h3>
+          <p>Explore the artistic district of Paris with stunning views and quaint cafés.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2 class="section-title">Travel Packages for Paris</h2>
+      <div class="filter-options">
+        <label for="filter">Filter by Budget:</label>
+        <select id="filter" onchange="filterPackages()">
+          <option value="all">All</option>
+          <option value="low">Budget-Friendly</option>
+          <option value="mid">Mid-Range</option>
+          <option value="high">Luxury</option>
+        </select>
+      </div>
+
+      <div class="package-card" data-category="low">
+        <h3>Budget Escape</h3>
+        <p>Perfect for travelers on a budget. Starting at $299.</p>
+        <button class="book-btn" onclick="bookPackage('low')">Book Now</button>
+      </div>
+      <div class="package-card" data-category="mid">
+        <h3>Romantic Getaway</h3>
+        <p>A dreamy escape for couples. Starting at $799.</p>
+        <button class="book-btn" onclick="bookPackage('mid')">Book Now</button>
+      </div>
+      <div class="package-card" data-category="high">
+        <h3>Luxury Paris Experience</h3>
+        <p>Experience Paris in luxury. Starting at $1999.</p>
+        <button class="book-btn" onclick="bookPackage('high')">Book Now</button>
+      </div>
+      
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+    <script>
+      function bookPackage(category) {
+      const bookingId = 'PARIS-' + Math.floor(Math.random() * 100000);
+      localStorage.setItem('bookingId', bookingId);  // Store bookingId
+      localStorage.setItem('packageCategory', category);  // Store selected category
+      window.location.href = "./payment.html";  // Redirect to payment page
+    }
+    
+    </script>
+  </body>
+</html>

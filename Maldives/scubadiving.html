@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scuba Diving</title>
+    <link rel="stylesheet" href="scubadiving.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../Images/Logo.png" id="logo" alt="Logo">
+        <ul class="nav-links">
+          <a href="../Travel/Travel.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#attractions">Attractions</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="carousel">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide">
+            <img src="../Images/Scuba Diving.jpg" alt="Scuba Diving in Maldives" />
+            <div class="carousel-caption">
+              <h2>Scuba Diving</h2>
+              <p>Explore the underwater paradise of the Maldives with vibrant marine life and coral reefs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Scuba Diving in the Maldives</h2>
+      <p>
+        The Maldives is a world-class destination for scuba diving, offering crystal-clear waters, abundant
+        marine life, and stunning coral reefs. Whether you’re a beginner or an experienced diver, the Maldives
+        has countless diving spots to explore, including shipwrecks, caves, and vibrant atolls teeming with
+        tropical fish.
+      </p>
+    </section>
+
+    <section id="attractions">
+      <h2 class="section-title">Top Scuba Diving Experiences</h2>
+      <div class="destination-grid">
+        <div class="destination-card">
+          <img src="../Images/Scuba 1.jpg" alt="Coral Reefs in Maldives" />
+          <h3>Explore Coral Reefs</h3>
+          <p>Dive into vibrant coral gardens and encounter a variety of marine life species.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Scuba 2.jpeg" alt="Shark Diving" />
+          <h3>Shark Diving</h3>
+          <p>Experience the thrill of diving with reef sharks and other majestic creatures.</p>
+        </div>
+        <div class="destination-card">
+          <img src="../Images/Scuba 3.jpg" alt="Shipwreck Diving" />
+          <h3>Shipwreck Adventures</h3>
+          <p>Discover hidden shipwrecks that offer a glimpse into the Maldives' maritime history.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="back-home">
+      <div class="back-home-container">
+        <button>
+          <a href="./maldives.html" class="back-home-btn">Back to Home</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <br><br><br>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+
+    <footer>
+      <p>Nani Travels Planner &copy; 2025. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
